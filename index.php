@@ -1,4 +1,22 @@
-<?php 
+<?phpfunction Calc()
+{
+	var n1 = numericVal(document.calcform.n1.value);
+	var n2  = numericVal(document.calcform.n2.value);	
+	var d  = n2-n1;
+	var dec  = numericVal(document.calcform.dec.value);
+	if (dec!= parseInt(dec)||dec=="")
+	 {
+   	dec=2;	
+	}
+		var r = ((n2-n1)/n1)*100 ;	
+	if (n1==0 || n2==0 )
+   { alert("NOTICE : \n Incomplete  data. \n Datos incompletos  \n Dados incompletos"); 
+   document.calcform.n1.value = "";
+	 document.calcform.n2.value = "";	
+	 document.calcform.r.value = "";	
+	 document.calcform.d.value = "";
+
+
     verificarNumero($lista);
     function  verificarNumero($lista){
         $novoNum = array();
